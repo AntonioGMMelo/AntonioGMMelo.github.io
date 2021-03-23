@@ -97,16 +97,6 @@ let DarkLighToggler = document.getElementById("DarkLightToggler");
 
 DarkLighToggler.addEventListener("click", lightDarkToggle);
 
-//Media Querry to Determine Wether the Screen is Big Enough to Add Smoke Animation
-window.addEventListener("resize", function(){
-    
-    const isSmokable = window.matchMedia("(min-width:810px)");
-
-    if(isSmokable.matches) split();
-
-});
-
-
 //Split Header Text to Letters
 function split(){
     
@@ -134,6 +124,32 @@ function split(){
 
     }
 
+}
+
+//Turn Letters back to header text
+function unsplit(){
+
+    const text = document.getElementById("intro");
+    const headline = text.getElementsByTagName("h1")[0];
+
+    //Turn span back to h1
+    const letters = document.querySelectorAll("span");
+
+    if(letters.length > 1){
+        
+        let helper = "";
+
+        for(let index = 0 ; index < letters.length; index++){   
+
+            helper += letters[index].innerHTML;
+
+        }
+
+        helper = helper.slice(0,7) + " " + helper.slice(7,14) + " " + helper.slice(14,18) + " " + helper.slice(18,20) + " " + helper.slice(20,25);
+
+        headline.innerText = helper;
+
+    }
 }
 
 
@@ -170,3 +186,20 @@ function menuToggle(){
     toggle.classList.toggle("active")
 
 }
+
+//Media Querry to Determine Wether the Screen is Big Enough to Add Smoke Animation
+function querryIsSmokable(){
+    
+    const isSmokable = window.matchMedia("(min-width:810px)");
+
+    if(isSmokable.matches) split();
+
+    else unsplit();
+
+}
+
+//First Querry for Original Page Size
+querryIsSmokable();
+
+//Event Listener to Run Media Querry on Resize
+window.addEventListener("resize", querryIsSmokable);
