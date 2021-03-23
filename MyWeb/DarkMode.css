@@ -1,0 +1,363 @@
+/* reset */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font:inherit;
+    vertical-align:baseline;
+
+}
+ 
+/* variables */
+
+:root{
+
+    --Main-Font: 'Pangolin', cursive;
+    --Second-Font:'Berkshire Swash', cursive;
+    --Dark-Ish: #570c0c;
+    --Dirty-White: #e4ceae;
+    --Bright-Red: #ec1640;
+    --Dirty-Black: #191919;
+
+}
+
+/* general */
+
+body{
+
+    background-color: black;
+    min-height: 100vh;
+    font-family: var(--Main-Font);
+
+}
+
+#DarkLightToggler{
+
+    position: absolute;
+    top:2rem;
+    left:2rem;
+
+}
+
+section{
+
+        min-height: 100vh;
+}
+
+/* header */
+
+#intro{
+
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    flex-direction: column;
+    background: url("./Images/DarkMode/DarkMode.jpg");
+    background-position-x: -30rem;
+    
+}
+
+#intro h1{
+
+    position:relative;
+    font-size: 4rem ;
+    color: var(--Dirty-White);
+    text-shadow: -.2rem .2rem var(--Dirty-Black);
+    text-align: center;
+    margin: 0 1rem;
+    user-select: none;
+
+}
+
+#intro p{
+
+    position: relative;
+    text-align: center;
+    padding: 2rem 10rem;
+    font-family: var(--Second-Font);
+    color: var(--Dirty-White);
+    font-size: 2rem;
+    text-shadow: -.1rem .1rem var(--Dirty-Black);
+    user-select: none;
+    min-width: 0;
+
+}
+
+#intro > * span{
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+#intro > * span.toSmoke{
+
+    animation: smoke 8s ease-in;
+    transform-origin: bottom;
+
+}
+
+@media(max-width:775px){
+
+    #intro{
+        padding-top: 10rem;
+    }
+
+}
+
+/* nav */
+
+/* nav button */
+
+.menuIcon{
+
+    position: fixed;
+    top: 2rem;
+    right:2rem;
+    width: 6rem;
+    height: 6rem;
+    background: var(--Dirty-White) url("./Images/navButton.png");
+    background-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: .5rem;
+    cursor:pointer;
+    border-radius: 50%;
+
+}
+
+.menuIcon.active{
+
+    background: var(--Dirty-White) url("./Images/closeNavButton.png");
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    cursor:pointer;
+
+}
+
+/* Actual Nav */
+
+.fullpageMenu{
+
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Dark-Ish);
+    transition: 0.5s;
+
+}
+
+.fullpageMenu.active{
+
+    top:0;
+
+}
+
+.fullpageMenu .banner{
+
+    position: relative;
+    min-width: 60rem;
+    height: 100%;
+
+}
+
+.fullpageMenu .banner img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+}
+
+nav ul{
+ 
+    position: relative;
+
+}
+
+nav ul li{
+    
+    position: relative;
+    list-style: none;
+    padding: 0 2rem;
+    margin: .5rem 0;
+    overflow:hidden;
+    display: table;
+    
+}
+
+nav ul li a{
+
+    position: relative;
+    color: var(--Dirty-White);
+    text-decoration: none;
+    font-size:  4rem;
+    font-weight: 700;
+    line-height: 1rem;
+    padding-top: 1.2rem;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+
+}
+
+@media (max-width: 85rem){
+
+    .banner{
+
+        display: none;
+
+    }
+
+}
+
+/* About Section */
+
+#about{
+
+    color: var(--Dirty-White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 20rem;
+    background:linear-gradient(90deg, var(--Dirty-Black),var(--Dark-Ish), var(--Dark-Ish), var(--Dirty-Black));
+
+}
+
+#content{
+
+    text-align: center;
+
+}
+
+#content h1{
+
+    font-family: var(--Main-Font);
+    font-size: 2rem;
+    text-shadow: -.2rem .2rem var(--Dirty-Black);
+
+}
+
+#content p{
+    
+    font-family: var(--Second-Font);
+    font-size: 1rem;
+    margin: 1rem 2rem;
+    text-shadow: -.1rem .1rem var(--Dirty-Black);
+
+}
+
+#image{
+
+    width: 200rem;
+    height:20rem;
+    background: url(./Images/DarkMode/DarkMode.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:1rem ;
+
+}
+
+@media(max-width:850px){
+
+    #image{
+
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    #content h1{
+
+        margin-top: 1rem;
+
+    }
+
+}
+
+/* Projects Section */
+
+#Projects{
+
+    background: peru;
+
+}
+
+/* Magic Section */
+
+#Magic{
+
+    background:gold;
+
+}
+
+/* Contact Section */
+
+#Contact{
+
+    background:white;
+
+}
+
+/* Footer */
+
+footer{
+
+    min-height: 20vh;
+
+}
+
+/* animations */
+
+@keyframes smoke{
+
+    0%{
+    
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25%{
+    
+        opacity: 1;
+        pointer-events: none;
+
+    }
+
+    50%{
+    
+        opacity: 0;
+        filter: blur(2rem);
+        transform: translate(30rem, -30rem) rotate(700deg) scale(4);
+
+    }
+
+}
