@@ -16,8 +16,8 @@
 
 :root{
 
-    --Main-Font: 'Pangolin', cursive;
-    --Second-Font:'Berkshire Swash', cursive;
+    --Main-Font: 'Berkshire Swash', cursive;
+    --Second-Font:'Pangolin', cursive;
     --Dark-Ish: #7272e7;
     --Dirty-White: #e4ceae;
     --Bright-Red: #ec1640;
@@ -216,7 +216,7 @@ nav ul li{
 
     position: relative;
     list-style: none;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     margin: .5rem 0;
     overflow:hidden;
     display: table;
@@ -232,7 +232,7 @@ nav ul li a{
     font-size:  4rem;
     font-weight: 700;
     line-height: 1rem;
-    padding-top: 1.2rem;
+    padding: 0.8rem;
     display: inline-block;
     text-transform: uppercase;
     transition: .5s ease-in-out;

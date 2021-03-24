@@ -11,23 +11,21 @@ let bottom = links[5].getElementsByTagName("a");
 
 landing[0].addEventListener("click", function(event){
     
-    window.scrollTo({
-    
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    
-    });;
-
-      menuToggle();
+    let top = document.getElementsByClassName("header")[0];
+    top.scrollIntoView();
+      
+    menuToggle();
 
 });
 
 about[0].addEventListener("click", function(){
-    
+     
+    let section = document.getElementById("about");
+    let rect = section.getBoundingClientRect();
+
     window.scrollTo({
-    
-        top: window.innerHeight,
+
+        top: rect.top,
         left: 0,
         behavior: 'smooth'
     
@@ -39,9 +37,12 @@ about[0].addEventListener("click", function(){
 
 projects[0].addEventListener("click", function(){
 
+    let section = document.getElementById("Projects");
+    let rect = section.getBoundingClientRect();
+
     window.scrollTo({
     
-        top: 2 * window.innerHeight,
+        top: rect.top,
         left: 0,
         behavior: 'smooth'
     
@@ -53,9 +54,12 @@ projects[0].addEventListener("click", function(){
 
 magic[0].addEventListener("click", function(){
 
+    let section = document.getElementById("Magic");
+    let rect = section.getBoundingClientRect();
+
     window.scrollTo({
     
-        top: 3 * window.innerHeight,
+        top: rect.top,
         left: 0,
         behavior: 'smooth'
     
@@ -67,9 +71,12 @@ magic[0].addEventListener("click", function(){
 
 contact[0].addEventListener("click", function(){
 
+    let section = document.getElementById("Contact");
+    let rect = section.getBoundingClientRect();
+
     window.scrollTo({
     
-        top: 4 * window.innerHeight,
+        top: rect.top,
         left: 0,
         behavior: 'smooth'
      
@@ -79,10 +86,13 @@ contact[0].addEventListener("click", function(){
 });
 
 bottom[0].addEventListener("click", function(){
+
+    let section = document.getElementsByTagName("footer")[0];
+    let rect = section.getBoundingClientRect();
     
     window.scrollTo({
 
-        top: 4 * window.innerHeight  + window.innerHeight / 5, 
+        top:rect.top, 
         left: 0,
         behavior: 'smooth'
 
