@@ -1,4 +1,4 @@
-//"Navigate to" event listeners
+//"Navigate to" onclicks
 
 let links = document.getElementById("navigation").getElementsByTagName("nav")[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
 
@@ -9,7 +9,9 @@ let magic = links[3].getElementsByTagName("a");
 let contact = links[4].getElementsByTagName("a");
 let bottom = links[5].getElementsByTagName("a");
 
-landing[0].addEventListener("click", function(event){~~
+landing[0].addEventListener("click", function(event){
+
+    event.preventDefault();
 
     window.scrollTo({
 
@@ -24,8 +26,8 @@ landing[0].addEventListener("click", function(event){~~
 
 });
 
-about[0].addEventListener("click", function(){
-     
+about[0].onclick = function(){
+         
     let section = document.getElementById("about");
     let rect = section.getBoundingClientRect();
 
@@ -37,11 +39,11 @@ about[0].addEventListener("click", function(){
     
     });
 
-      menuToggle();
+    menuToggle();
 
-});
+}
 
-projects[0].addEventListener("click", function(){
+projects[0].onclick = function(){
 
     let section = document.getElementById("Projects");
     let rect = section.getBoundingClientRect();
@@ -56,9 +58,9 @@ projects[0].addEventListener("click", function(){
 
       menuToggle();
     
-});
+}
 
-magic[0].addEventListener("click", function(){
+magic[0].onclick = function(){
 
     let section = document.getElementById("Magic");
     let rect = section.getBoundingClientRect();
@@ -73,9 +75,9 @@ magic[0].addEventListener("click", function(){
 
       menuToggle();
 
-});
+}
 
-contact[0].addEventListener("click", function(){
+contact[0].onclick = function(){
 
     let section = document.getElementById("Contact");
     let rect = section.getBoundingClientRect();
@@ -89,9 +91,9 @@ contact[0].addEventListener("click", function(){
     });
 
       menuToggle();
-});
+}
 
-bottom[0].addEventListener("click", function(){
+bottom[0].onclick = function(){
 
     let section = document.getElementsByTagName("footer")[0];
     let rect = section.getBoundingClientRect();
@@ -106,7 +108,7 @@ bottom[0].addEventListener("click", function(){
 
     menuToggle();
 
-});
+}
 
 //Setting up DarkLightModes event listener
 let DarkLighToggler = document.getElementById("DarkLightToggler");
