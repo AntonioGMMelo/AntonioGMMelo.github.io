@@ -9,10 +9,16 @@ let magic = links[3].getElementsByTagName("a");
 let contact = links[4].getElementsByTagName("a");
 let bottom = links[5].getElementsByTagName("a");
 
-landing[0].addEventListener("click", function(event){
+landing[0].addEventListener("click", function(event){~~
+
+    window.scrollTo({
+
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
     
-    let top = document.getElementsByClassName("header")[0];
-    top.scrollIntoView();
+    });
+
       
     menuToggle();
 
