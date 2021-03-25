@@ -129,7 +129,7 @@ section{
 
 .menuIcon{
 
-    position: fixed;
+    position: absolute;
     top: 2rem;
     right:2rem;
     width: 6rem;
