@@ -1,5 +1,4 @@
 //"Navigate to" onclicks
-
 let links = document.getElementById("navigation").getElementsByTagName("nav")[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
 
 let landing = links[0].getElementsByTagName("a");
@@ -13,14 +12,7 @@ landing[0].addEventListener("click", function(event){
 
     event.preventDefault();
 
-    window.scrollTo({
-
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    
-    });
-
+    toTop();
       
     menuToggle();
 
@@ -110,7 +102,7 @@ bottom[0].onclick = function(){
 
 }
 
-//Setting up DarkLightModes event listener
+//Setting up DarkLightMode event listener
 let DarkLighToggler = document.getElementById("DarkLightToggler");
 
 DarkLighToggler.addEventListener("click", lightDarkToggle);
@@ -208,7 +200,7 @@ function menuToggle(){
 //Media Querry to Determine Wether the Screen is Big Enough to Add Smoke Animation
 function querryIsSmokable(){
     
-    const isSmokable = window.matchMedia("(min-width:810px)");
+    const isSmokable = window.matchMedia("(min-width:860px)");
 
     if(isSmokable.matches) split();
 
@@ -221,3 +213,39 @@ querryIsSmokable();
 
 //Event Listener to Run Media Querry on Resize
 window.addEventListener("resize", querryIsSmokable);
+
+//Event listener for on scroll
+document.addEventListener("scroll", isBackToTop);
+
+//Function to know weather back to top button should appear
+function isBackToTop(){
+
+    let button = document.getElementsByClassName("backToTop")[0];
+    let navIcon = document.getElementById("toggle");
+
+    if(document.documentElement.scrollTop > .1* window.innerHeight){
+
+        button.classList.add("backToTopActive");
+        navIcon.classList.add("addMenuButtonAnimation");
+    
+    }else{
+
+        button.classList.remove("backToTopActive");
+        navIcon.classList.remove("addMenuButtonAnimation");
+
+    }
+
+}
+
+//to top function
+function toTop(){
+
+    window.scrollTo({
+
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    
+    });
+
+}
