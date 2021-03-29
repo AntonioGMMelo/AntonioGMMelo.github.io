@@ -377,7 +377,8 @@ nav ul li a{
     align-items: center;
     flex-shrink: 2;
     flex-wrap: wrap-reverse ;
-
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .slideContent .slideText{
