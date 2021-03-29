@@ -349,7 +349,68 @@ nav ul li a{
 #Projects{
 
     background: peru;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.swiper-container{
+    height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.swiper-slide{
+
+    background: var(--Dirty-Black);
+    background-position: center ;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.swiper-slide .slideContent{
+
+    background: var(--Dirty-White);
+    color: var(--Dirty-Black);
+    height: 40rem;
+    width: 110rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.slideContent .slideText{
+
+    min-width: 70%;
+    padding:5rem;
+
+}
+
+.slideContent .slideText p{
+ 
+    font-family: var(--Second-Font);
+
+}
+
+.slideContent .slideImage{
+
+    min-width: 30%;
+    padding:5rem;
+
+}
+
+.slideContent .slideImage img{
+
+    height: 10rem;
+    width: 20rem;
+    
 }
 
 /* Magic Section */
