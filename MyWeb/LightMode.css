@@ -382,7 +382,7 @@ nav ul li a{
     height: 40rem;
     width: 110rem;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
     flex-shrink: 2;
     flex-wrap: wrap-reverse ;
