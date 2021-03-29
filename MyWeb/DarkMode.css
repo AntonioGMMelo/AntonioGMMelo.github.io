@@ -34,7 +34,12 @@ body{
     font-family: var(--Main-Font);
     height: 100%;
     width: 100%;
+    
+}
 
+section{
+
+        min-height: 100vh;
 }
 
 #DarkLightToggler{
@@ -42,12 +47,44 @@ body{
     position: absolute;
     top:2rem;
     left:2rem;
+    width :60px;
+    height: 20px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: var(--Dark-Ish);
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px var(--Dark-Ish),
+                -2px -2px 20px var(--Dark-Ish),
+                0 0 0 1px #000;
+}
+
+#DarkLightToggler::before{
+
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:20px;
+    background: linear-Gradient(90deg, #000, var(--Dirty-Black),rgb(122, 109, 109));
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #000;
+    transform: scale(.95,.9);
 
 }
 
-section{
+#DarkLightToggler::after{
 
-        min-height: 100vh;
+    content:'';
+    position:absolute;
+    top:45%;
+    left:50%;
+    width:4px;
+    height:4px;
+    background: var(--Dark-Ish);
+    border-radius: 50%;
+    box-shadow: 0 0 2px var(--Dark-Ish);
+
 }
 
 /* header */

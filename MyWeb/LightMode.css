@@ -34,17 +34,54 @@ body{
 
 }
 
+section{
+
+    min-height: 100vh;
+}
+
 #DarkLightToggler{
 
     position: absolute;
     top:2rem;
     left:2rem;
+    width :60px;
+    height: 20px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: var(--Bright-Red);
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px var(--Bright-Red),
+                -2px -2px 20px var(--Bright-Red),
+                0 0 0 1px #000;
+}
+
+#DarkLightToggler::before{
+
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:20px;
+    background: linear-Gradient(90deg, var(--Dirty-White),var(--Dirty-White),#FFF);
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #000;
+    transform: scale(.95,.9);
 
 }
 
-section{
+#DarkLightToggler::after{
 
-    min-height: 100vh;
+    content:'';
+    position:absolute;
+    top:45%;
+    right:8%;
+    width:4px;
+    height:4px;
+    background: var(--Bright-Red);
+    border-radius: 50%;
+    box-shadow: 0 0 2px var(--Bright-Red);
+
 }
 
 /* header */
