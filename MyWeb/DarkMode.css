@@ -375,12 +375,16 @@ nav ul li a{
     display: flex;
     justify-content:space-around;
     align-items: center;
+    flex-shrink: 2;
+    flex-wrap: wrap-reverse ;
+
 }
 
 .slideContent .slideText{
 
-    min-width: 70%;
-    padding:5rem;
+    max-width: 70%;
+    padding-left:5rem;
+    padding-right:5rem;
 
 }
 
@@ -392,8 +396,8 @@ nav ul li a{
 
 .slideContent .slideImage{
 
-    min-width: 30%;
-    padding:5rem;
+    padding-left:4rem;
+    padding-right:4rem;
 
 }
 
@@ -401,7 +405,7 @@ nav ul li a{
 
     height: 10rem;
     width: 20rem;
-    
+
 }
 
 /* Magic Section */

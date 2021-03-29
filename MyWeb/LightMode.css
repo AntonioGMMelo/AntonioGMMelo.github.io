@@ -365,7 +365,7 @@ nav ul li a{
 
 .swiper-slide{
 
-    background: var(--Dirty-Black);
+    background: var(--Dirty-White);
     background-position: center ;
     background-size: cover;
     height: 40rem;
@@ -377,19 +377,23 @@ nav ul li a{
 
 .swiper-slide .slideContent{
 
-    background: var(--Dirty-White);
-    color: var(--Dirty-Black);
+    background: var(--Dirty-Black);
+    color: var(--Dirty-White);
     height: 40rem;
     width: 110rem;
     display: flex;
     justify-content:space-around;
     align-items: center;
+    flex-shrink: 2;
+    flex-wrap: wrap-reverse ;
+
 }
 
 .slideContent .slideText{
 
-    min-width: 70%;
-    padding:5rem;
+    max-width: 70%;
+    padding-left:5rem;
+    padding-right:5rem;
 
 }
 
@@ -401,8 +405,8 @@ nav ul li a{
 
 .slideContent .slideImage{
 
-    min-width: 30%;
-    padding:5rem;
+    padding-left:4rem;
+    padding-right:4rem;
 
 }
 
@@ -410,7 +414,7 @@ nav ul li a{
 
     height: 10rem;
     width: 20rem;
-    
+
 }
 
 /* Magic Section */
