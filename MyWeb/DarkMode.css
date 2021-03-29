@@ -377,15 +377,14 @@ nav ul li a{
     align-items: center;
     flex-shrink: 2;
     flex-wrap: wrap-reverse ;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+
 }
 
 .slideContent .slideText{
 
     max-width: 70%;
-    padding-left:5rem;
-    padding-right:5rem;
+    margin-left:5rem;
+    margin-right:5rem;
 
 }
 
@@ -397,8 +396,8 @@ nav ul li a{
 
 .slideContent .slideImage{
 
-    padding-left:4rem;
-    padding-right:4rem;
+    margin-left:4rem;
+    margin-right:4rem;
 
 }
 
