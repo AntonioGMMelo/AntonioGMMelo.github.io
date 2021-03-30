@@ -145,8 +145,6 @@ function unsplit(){
     //Turn span back to h1
     const letters = document.querySelectorAll("span");
 
-    console.log(letters.length);
-
     if(letters.length > 4){
         
         let helper = "";
@@ -251,3 +249,60 @@ function toTop(){
     });
 
 }
+
+//GitHub Links event listeners 
+let boredGame = document.getElementById("BoredGame");
+
+boredGame.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/BoredGame-BoardGame-");
+
+});
+
+let courseio = document.getElementById("Courseio");
+
+courseio.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/Courseio");
+
+});
+
+let spotifiul = document.getElementById("SpotifIUL");
+
+spotifiul.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/SpotifIUL");
+
+});
+
+let highLow = document.getElementById("HighLowCardGenerator");
+
+highLow.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/HighLowCardGenerator");
+
+});
+
+let codeSniffer = document.getElementById("CodeSniffer");
+
+codeSniffer.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/ES-2Sem-2021-Grupo53");
+
+});
+
+let cultureApp = document.getElementById("CultureMonitoring");
+
+cultureApp.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/PISID_G17");
+
+});
+
+let thisWeb = document.getElementById("thisWebsite");
+
+thisWeb.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/AntonioGMMelo.github.io");
+
+});

@@ -465,6 +465,74 @@ nav ul li a{
     height: 10rem;
     width: 20rem;
     flex: 1 1 30%;
+    tabindex:-1;
+
+}
+
+.slideContent .slideImage img:hover{
+
+    outline: none;
+
+}
+
+.slideImage::after{
+
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: var(--Bright-Red);
+    background-image: url("Images/GitHub-Mark-32px.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    position: absolute;
+    border-radius: 1000px;
+    cursor: pointer;
+    margin-left: -3rem;
+    margin-top: 7.25rem;
+    visibility: hidden;
+
+}
+
+.slideImage::before{
+
+    content: '';
+    width: 320px;
+    height: 100px;
+    background: var(--Dark-Ish);
+    opacity: .8;
+    margin-top: 60px;
+    position: absolute;
+    visibility: hidden;
+
+}
+
+.slideImage:hover::before{
+
+    outline: none;
+    visibility: visible;
+
+}
+
+.slideImage:hover::after{
+
+    outline: none;
+    visibility: visible;
+    pointer-events: none;
+
+}
+
+.clickableArea{
+
+    position: absolute;
+    display: inline-block;
+    background: #FFF;
+    width: 30px;
+    height: 30px;
+    margin-left: -49px;
+    margin-top: 116px ;
+    opacity: 0;
+    cursor: pointer;
 
 }
 
