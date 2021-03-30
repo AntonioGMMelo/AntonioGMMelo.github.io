@@ -421,6 +421,12 @@ nav ul li a{
         flex-wrap: wrap-reverse;
     }
 
+    .slideContent .slideText{
+
+        margin-top: -4rem;
+
+    }
+
 }
 
 .slideContent .slideText{
