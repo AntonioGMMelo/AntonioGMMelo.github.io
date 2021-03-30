@@ -384,6 +384,7 @@ nav ul li a{
 }
 
 .swiper-container{
+
     height: 80vh;
     width: 100%;
     padding-top: 50px;
@@ -393,7 +394,6 @@ nav ul li a{
 
 .swiper-slide{
 
-    background: var(--Dirty-White);
     background-position: center ;
     background-size: cover;
     height: 40rem;
@@ -411,17 +411,30 @@ nav ul li a{
     width: 110rem;
     display: flex;
     justify-content:center;
-    align-items: center;
-    flex-shrink: 2;
-    flex-wrap: wrap-reverse ;
+    align-items: center;    
+
+}
+
+@media(max-width:800px){
+
+    .swiper-slide .slideContent{    
+        flex-wrap: wrap-reverse;
+    }
 
 }
 
 .slideContent .slideText{
 
-    max-width: 70%;
+    flex: 1 1 60%;
     margin-left:5rem;
     margin-right:5rem;
+
+}
+
+.slideText h1{
+
+    text-align: center;
+    margin-bottom: .5rem;
 
 }
 
@@ -442,6 +455,7 @@ nav ul li a{
 
     height: 10rem;
     width: 20rem;
+    flex: 1 1 30%;
 
 }
 

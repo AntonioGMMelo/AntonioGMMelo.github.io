@@ -145,7 +145,9 @@ function unsplit(){
     //Turn span back to h1
     const letters = document.querySelectorAll("span");
 
-    if(letters.length > 1){
+    console.log(letters.length);
+
+    if(letters.length > 4){
         
         let helper = "";
 
