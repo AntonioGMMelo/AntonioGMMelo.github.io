@@ -486,7 +486,6 @@ nav ul li a{
     height: 10rem;
     width: 20rem;
     flex: 1 1 30%;
-    tabindex:-1;
 
 }
 

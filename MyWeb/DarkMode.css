@@ -418,7 +418,7 @@ nav ul li a{
 
     background-position: center ;
     background-size: cover;
-    height: 50rem;
+    height: 40rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,12 +441,6 @@ nav ul li a{
 
     .swiper-slide .slideContent{    
         flex-wrap: wrap-reverse;
-    }
-
-    .slideContent .slideText{
-
-        margin-top: -8rem;
-
     }
 
 }
