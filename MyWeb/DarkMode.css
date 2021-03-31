@@ -89,6 +89,23 @@ section{
 
 /* header */
 
+#topHover{
+
+    margin-left: -900px;
+    margin-top: 200px;
+
+}
+
+@media(max-width:880px){
+
+    #topHover{
+
+        visibility: hidden;
+
+    }
+
+}
+
 #intro{
 
     position: relative;
@@ -141,14 +158,6 @@ section{
 
     animation: smoke 8s ease-in;
     transform-origin: bottom;
-
-}
-
-@media(max-width:775px){
-
-    #intro{
-        padding-top: 10rem;
-    }
 
 }
 
@@ -383,6 +392,19 @@ nav ul li a{
 
 }
 
+.hoverIcon{
+
+    content: '';
+    background: url("Images/hoverDark.png");
+    width: 10rem;
+    height: 5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    
+}
+
 .swiper-container{
 
     height: 80vh;
@@ -498,7 +520,7 @@ nav ul li a{
     height: 100px;
     background: var(--Bright-Red);
     opacity: .8;
-    margin-top: 60px;
+    margin-top: 140px;
     position: absolute;
     visibility: hidden;
 
@@ -519,7 +541,7 @@ nav ul li a{
 
 }
 
-.clickableArea{
+.clickableArea{ 
 
     position: absolute;
     display: inline-block;
