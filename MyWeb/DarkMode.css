@@ -414,21 +414,6 @@ nav ul li a{
 
 }
 
-@media(max-width:680px){
-
-    .swiper-slide{
-
-        height: 60rem;
-    
-    }
-    .swiper-slide .slideImage{
-
-        margin-bottom: 7.5rem;
-
-    }    
-
-}
-
 .swiper-slide{
 
     background-position: center ;
