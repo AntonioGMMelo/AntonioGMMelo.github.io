@@ -174,15 +174,22 @@ function lightDarkToggle(){
     let ogImage = document.getElementById("menuImage");
     let imageOld = ogImage.getAttribute("src");
 
+    let ogGithub = document.getElementById("githubLogoFooter");
+    let gitHubOldLogo = ogGithub.getAttribute("src");
+
     let newTheme = "DarkMode.css";
     let newImage = "./Images/DarkMode/DarkMode.jpg";
+    let newGithub = "./Images/GitHub-Mark-Light-32px.png";
 
     if(themeOld == "DarkMode.css") newTheme = "LightMode.css";
     
     if(imageOld == "./Images/DarkMode/DarkMode.jpg") newImage = "./Images/LightMode/LightMode.jpg";
-    
+
+    if(gitHubOldLogo == "./Images/GitHub-Mark-Light-32px.png") newGithub = "./Images/GitHub-Mark-32px.png";
+
     ogLink.setAttribute("href", newTheme);
     ogImage.setAttribute("src", newImage);
+    ogGithub.setAttribute("src", newGithub);
 
 }
 
