@@ -460,8 +460,8 @@ nav ul li a{
 
     .slideText p{
 
-        font-size: 13px;
-
+        font-size: 14px;
+        padding-bottom: 1rem;
     }
 
 }
