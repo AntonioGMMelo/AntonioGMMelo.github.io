@@ -469,6 +469,13 @@ nav ul li a{
     
     }
 
+    .slideText p{
+
+        font-size: 14px;
+        padding-bottom: 1rem;
+        
+    }
+
 }
 
 .slideContent .slideText{
@@ -735,6 +742,15 @@ nav ul li a{
 
 }
 
+
+.animationFlip{
+
+    animation-name: flip;
+    animation-duration: 1s;
+    opacity: .75;
+
+}
+
 @media(max-width: 991px){
 
     .contact{
@@ -896,4 +912,37 @@ footer ul li::after{
 
     }
 
+}
+
+@keyframes flip{
+    0%{
+        transform: translate(70px, -35px);
+    }
+    6.25%{
+        transform: rotate(-22.5deg) translate(55px, -27px);
+    }
+    12.5%{
+        transform: rotate(-45deg) translate(43px, -23px);
+    }
+    25%{
+        transform: rotate(-90deg) translate(35px, -16px);
+    }
+    37.5%{
+        transform: rotate(-135deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    62.5%{
+        transform: rotate(-225deg);
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    87.5%{
+        transform: rotate(-315deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
 }

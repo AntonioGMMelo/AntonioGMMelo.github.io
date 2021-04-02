@@ -313,3 +313,17 @@ thisWeb.addEventListener("click", function(){
     window.open("https://github.com/AntonioGMMelo/AntonioGMMelo.github.io");
 
 });
+
+// butto flip add
+
+let button = document.getElementById("submit");
+
+button.addEventListener("mouseover", async function(){
+
+    button.classList.add("animationFlip");
+
+    await new Promise(sleep => setTimeout(sleep, 5000));
+
+    button.classList.remove("animationFlip");
+
+});
