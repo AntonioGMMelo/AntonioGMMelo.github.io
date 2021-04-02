@@ -331,6 +331,12 @@ nav ul li a{
 
 }
 
+nav ul li a:hover{
+
+    color:var(--Bright-Red);
+
+}
+
 @media (max-width: 85rem){
 
     .banner{
@@ -472,8 +478,8 @@ nav ul li a{
     .slideText p{
 
         font-size: 14px;
-        padding-bottom: 1rem;
-        
+        padding-bottom: 2rem;
+
     }
 
 }
