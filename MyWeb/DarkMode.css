@@ -579,7 +579,114 @@ nav ul li a:hover{
 
 #Magic{
 
-    background:gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(138, 27, 27);
+
+}
+
+.magicContainer{
+
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: minmax(200px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+
+}
+
+.magicContainer .magicBox{
+
+    background: rgb(66, 1, 1);
+    padding:20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: rgb(145, 159, 241);
+    transition: 0.5s;
+
+}
+
+.magicContainer .magicBox:hover{
+
+    background: #e91e63;
+
+}
+
+.magicContainer .magicBox img{
+
+  position: relative;
+  max-width: 100px;
+  margin-bottom: 10px;
+    
+}
+
+.magicContainer .magicBox:nth-child(1){
+
+    grid-column: span 2 ;
+    grid-row: span 1;
+
+}
+
+.magicContainer .magicBox:nth-child(2){
+
+    grid-column: span 1 ;
+    grid-row: span 2;
+
+}
+
+.magicContainer .magicBox:nth-child(4){
+
+    grid-column: span 1 ;
+    grid-row: span 2;
+
+}
+
+.magicContainer .magicBox:nth-child(5){
+
+    grid-column: span 3 ;
+    grid-row: span 1;
+
+}
+
+@media(max-width:991px){
+
+    .magicContainer{
+
+        grid-template-columns: repear(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+
+    }
+
+    .magicContainer .magicBox{
+
+        grid-column: unset !important;
+        grid-row: unset i !important;
+
+    }
+
+}
+
+@media(max-width:410px){
+
+    .magicContainer{
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+    .magicContainer .magicBox{
+        
+        margin:10px 0;
+
+    }
 
 }
 
