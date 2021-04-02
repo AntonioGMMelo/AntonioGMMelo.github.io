@@ -113,7 +113,7 @@ function split(){
     const text = document.getElementById("intro");
     const headline = text.getElementsByTagName("h1")[0];
 
-    headline.innerHTML = headline.textContent.replace(/\S/g, "<span>$&</span>");
+    headline.innerHTML = headline.textContent.replace(/\S/g, "<span class = \"headerElement\">$&</span>");
 
     //Hover for span items
     const letters = document.querySelectorAll("span");
@@ -143,7 +143,7 @@ function unsplit(){
     const headline = text.getElementsByTagName("h1")[0];
 
     //Turn span back to h1
-    const letters = document.querySelectorAll("span");
+    const letters = document.getElementsByClassName("headerElement");
 
     if(letters.length > 4){
         
@@ -230,7 +230,7 @@ function isBackToTop(){
     let button = document.getElementsByClassName("backToTop")[0];
     let navIcon = document.getElementById("toggle");
 
-    if(document.documentElement.scrollTop > .1* window.innerHeight){
+    if((document.documentElement.scrollTop > .1* window.innerHeight && document.documentElement.scrollTop < window.innerHeight) || document.documentElement.scrollTop > 2* window.innerHeight +10 ){
 
         button.classList.add("backToTopActive");
         navIcon.classList.add("addMenuButtonAnimation");
