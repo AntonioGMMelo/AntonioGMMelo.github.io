@@ -230,7 +230,7 @@ function isBackToTop(){
     let button = document.getElementsByClassName("backToTop")[0];
     let navIcon = document.getElementById("toggle");
 
-    if((document.documentElement.scrollTop > .1* window.innerHeight){
+    if(document.documentElement.scrollTop > .1* window.innerHeight){
 
         button.classList.add("backToTopActive");
         navIcon.classList.add("addMenuButtonAnimation");
