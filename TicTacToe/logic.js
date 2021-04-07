@@ -17,8 +17,6 @@ that the AI is unbeattable, it is essentially a hard
 coded decision tree.
 */
 
-
-
 //Helper fucntion to replace a char in the given index with the given replacement
 String.prototype.replaceAt = function(index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
@@ -28,7 +26,7 @@ String.prototype.replaceAt = function(index, replacement) {
 function isBoardValid(ticTacToeBoard){
 
     let board = ticTacToeBoard;
-
+    console.log(board);
     if(board.length != 9 || (board[0] != "." && board[0] != "x" && board[0] != "o") || (board[1] != "." && board[1] != "x" && board[1] != "o") || (board[2] != "." && board[2] != "x" && board[2] != "o") || (board[3] != "." && board[3] != "x" && board[3] != "o") || (board[4] != "." && board[4] != "x" && board[4] != "o") || (board[5] != "." && board[5] != "x" && board[5] != "o") || (board[6] != "." && board[6] != "x" && board[6] != "o") || (board[7] != "." && board[7] != "x" && board[7] != "o") || (board[8] != "." && board[8] != "x" && board[8] != "o"))
         return true;
     else 
@@ -507,5 +505,12 @@ function lastMove(ticTacToeBoard){
 
 }
 
-const a = lastMove("xoxxoxo..");
-console.log(a);
+module.exports = {
+
+    hasWon,
+    firstMove,
+    secondMove,
+    thirdMove,
+    lastMove
+
+}
