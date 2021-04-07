@@ -10,8 +10,12 @@ x = indes/3 and y= index%3, take 8 as an example
     0,0; 0,1; 0,2
     1,0; 1,1; 1,2
     2,0; 2,1; 2,2
-]
-*/ 
+].
+
+Note 2: this is HARD coded for speed and to ensure
+that the AI is unbeattable, it is essentially a hard 
+coded decision tree.
+*/
 
 
 
@@ -315,4 +319,193 @@ function lastMove(ticTacToeBoard){
     if(isBoardValid(board))
         throw "Illegal Argument";
 
+    if(board === "oxxxx.oo."){
+        return "oxxxx.ooo";
+    }else if(board === "oxx.xxoo."){
+        return "oxxoxxoo.";
+    }else if(board === "oxx.x.oox"){
+        return "oxxox.oox";
+    }else if(board === "oxxxxo.o."){
+        return "oxxxxooo.";
+    }else if(board === "ox.xxoxo."){
+        return "oxoxxoxo.";
+    }else if(board === "ox.xxo.ox"){
+        return "oxoxxo.ox";
+    }else if(board === "ox.oxxxo."){
+        return "oxooxxxo.";
+    }else if(board === "oxooxx.o." || board === "ox.oxx.ox"){
+        return board.replaceAt(6,"o");
+    }else if(board === "oxoxx.xo."){
+        return "oxoxxoxo.";
+    }else if(board === "oxo.xxxo."){
+        return "oxooxxxo.";
+    }else if(board === "oxo.x.xox"){
+        return "oxoox.xox";
+    }else if(board === "oxx.xo.ox") {
+        return "oxx.xooox";
+    }else if(board === "ox..xo.ox"){
+        return "oxoxxo.ox"
+    }else if(board === "ox..xoxox"){
+        return "oxo.xoxox";    
+    }else if(board === "o.xxxoo.."){
+        return "oxxxxooo.";
+    }else if(board === "o.xxxoox."){
+        return "ooxxxoox.";
+    }else if(board === "o.xxxoo.x"){
+        return "o.xxxooox";
+    }else if(board === "oxxxxo.o."){
+        return "oxxxxooo.";
+    }else if(board === "ox.xxoxo."){
+        return "oxoxxoxo.";
+    }else if(board === "ox.xxo.ox"){
+        return "oxoxxo.ox";
+    }else if(board === "oxxxxoo.."){
+        return "oxxxxooo.";
+    }else if(board === "o.xxxoox."){
+        return "ooxxxoox.";
+    }else if(board === "o.xxxoo.x"){
+        return "ooxxxoo.x";
+    }else if(board === "oxoxxox.."){
+        return "oxoxxox.o";
+    }else if(board === "o.oxxoxx." || board === "o.oxxox.x"){
+        return board.replaceAt(1,"o");
+    }else if(board === "ooxxxo.x."){
+        return "ooxxxoox.";
+    }else if(board === "oo.xxoxx."){
+        return "oooxxoxx.";
+    }else if(board === "oo.xxo.xx"){
+        return "oooxxo.xx";
+    }else if(board === "ox.xxoo.x"){
+        return "ox.xxooox";
+    }else if(board === "o.xxxoo.x" || board === "o..xxooxx"){
+        return board.replaceAt(1, "o");
+    }else if(board === "oxoxx.xo"){
+        return "oxoxxoxo.";
+    }else if(board === "oxo.xxxo." || board === "oxo.x.xox"){
+        return board.replaceAt(3, "o");
+    }else if(board === "ooxxx.ox."){
+        return "ooxxxoox.";
+    }else if(board === "oox.xxox." || board === "oox.x.oxx"){
+        return board.replaceAt(3, "o");
+    }else if(board === "ox.xxoo.x"){
+        return "ox.xxooox";
+    }else if(board === "o.xxxoo.x" || board === "o..xxooxx"){
+        return board.replaceAt(1, "o");
+    }else if(board === "xxoooxx.."){
+        return "xxooox.o";
+    }else if(board === "xxooo.xx." || board === "xxooo.x.x"){
+        return board.replaceAt(5, "o");
+    }else if(board === "xoxoox.x."){
+        return "xoxoox.xo";
+    }else if(board === "xoxoo.xx." || board ==="xoxoo..xx"){
+        return board.replaceAt(5, "o");
+    }else if(board === "xoxxo.ox."){
+        return "xoxxooox.";
+    }else if(board === "xoxxoxo.." || board === "xoxxo.o.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "x.oooxxx."){
+        return "xooooxxx.";
+    }else if(board === "xxoooxx.." || board === "x.oooxx.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "xo.ooxxx."){
+        return "xo.ooxxxo";
+    }else if(board === "xoxooxx.." || board === "xo.ooxx.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "xox.oxox."){
+        return "xox.oxoxo";
+    }else if(board === "xoxxo.ox." || board === "xox.o.oxx"){
+        return board.replaceAt(5, "o");
+    }else if(board === "x.ooox.xx"){
+        return "x.oooxoxx";
+    }else if(board === "xxooox..x" || board === "x.oooxx.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "oxxxoo..x"){
+        return "oxxxooo.x";
+    }else if(board === "oxx.oox.x" || board === "oxx.oo.xx"){
+        return board.replaceAt(3, "o");
+    }else if(board === "oxoxo.x.x"){
+        return "oxoxo.xox";
+    }else if(board === "oxoxox..x" || board === "oxoxo..xx"){
+        return board.replaceAt(6, "o");
+    }else if(board === "xxo.oxx.o"){
+        return "xxoooxx.o";
+    }else if(board === ".xoxoxx.o" || board === ".xo.oxxxo"){
+        return board.replaceAt(0, "o");
+    }else if(board === "ox..oxxox"){
+        return "oxo.oxxox";
+    }else if(board === "oxx.o.xoxo" || board === "ox.xo.xox"){
+        return board.replaceAt(5, "o");
+    }else if(board === "ox.xo.oxx"){
+        return "oxoxo.oxx";
+    }else if(board === "oxx.o.oxx" || board === "ox..oxoxx"){
+        return board.replaceAt(3, "o");
+    }else if(board === ".xoxo.xox"){
+        return "oxoxo.xox";
+    }else if(board === "xxo.o.xox" || board === ".xo.oxxox"){
+        return board.replaceAt(3, "o");
+    }else if(board === "o.xxoo.xx"){
+        return "o.xxooooxx";
+    }else if(board === "oxxxoo..x" || board === "o.xxoox.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "xox.ox.xo"){
+        return "xox.oxoxo";
+    }else if(board === "xoxxox..o" || board === "xox.oxx.o"){
+        return board.replaceAt(7, "o");
+    }else if(board === "xox.o.xxo"){
+        return "xoxoo.xxo";
+    }else if(board === ".oxxo.xxo" || board === ".ox.oxxxo"){
+        return board.replaceAt(0, "o");
+    }else if(board === "xoxxo..xo"){
+        return "xoxxo.oxo";
+    }else if(board === "xox.ox.xo" || board === "xox.o.xxo"){
+        return board.replaceAt(3, "o");
+    }else if(board === ".oxxoo.xx"){
+        return ".oxxoooxx";
+    }else if(board === "xoxxoo..x" || board === ".oxxoox.x"){
+        return board.replaceAt(7, "o");
+    }else if(board === "x.xxoxo.o"){
+        return "x.xxoxooo";
+    }else if(board === ".xxxoxo.o" || board === "..xxoxoxo"){
+        return board.replaceAt(0, "o");
+    }else if(board === "ox.xo.xox"){
+        return "oxoxo.xox";
+    }else if(board === "o.xxo.xox" || board == "o..xoxxox"){
+        return board.replaceAt(1, "o");
+    }else if(board === "x.xxo.oxo"){
+        return "xoxxo.oxo";
+    }else if(board === ".xxxo.oxo" || board === "..xxoxoxo"){
+        return board.replaceAt(0, "o");
+    }else if(board === ".xxxooo.x"){
+        return "oxxxooo.x";
+    }else if(board === "x.xxooo.x" || board === "..xxoooxx"){
+        return board.replaceAt(1, "o");
+    }else if(board === "xx.ooxx.o"){
+        return "xxoooxx.o";
+    }else if(board === "x.xooxx.o" || board === "x..ooxxxo"){
+        return board.replaceAt(1, "o");
+    }else if(board === "x.o.oxxxo"){
+        return "x.oooxxxo";
+    }else if(board === "xxo.ox.xo" || board === "x.oxox.xo"){
+        return board.replaceAt(6, "o");
+    }else if(board === ".xo.oxxox"){
+        return "oxo.oxxox";
+    }else if(board === "x.o.oxxox" || board === "..oxoxxox"){
+        return board.replaceAt(1, "o");
+    }else if(board === "x..ooxxxo"){
+        return "x.oooxxxo";
+    }else if(board === "xx.oo.xxo" || board === "x.xoo.xxo"){
+        return board.replaceAt(5, "o");
+    }else if(board === ".x.ooxxox"){
+        return ".xoooxxox";
+    }else if(board === "xx.oo.xox" || board === ".xxoo.xox"){
+        return board.replaceAt(5, "o");
+    }else if(board === "..xxoooxx"){
+        return "o.xxoooxx";
+    }else if(board === "x.x.oooxx" || board === ".xx.oooxx"){
+        return board.replaceAt(3, "o");
+    }
+
 }
+
+const a = lastMove("xoxxoxo..");
+console.log(a);
