@@ -26,8 +26,8 @@ String.prototype.replaceAt = function(index, replacement) {
 function isBoardValid(ticTacToeBoard){
 
     let board = ticTacToeBoard;
-    console.log(board);
-    if(board.length != 9 || (board[0] != "." && board[0] != "x" && board[0] != "o") || (board[1] != "." && board[1] != "x" && board[1] != "o") || (board[2] != "." && board[2] != "x" && board[2] != "o") || (board[3] != "." && board[3] != "x" && board[3] != "o") || (board[4] != "." && board[4] != "x" && board[4] != "o") || (board[5] != "." && board[5] != "x" && board[5] != "o") || (board[6] != "." && board[6] != "x" && board[6] != "o") || (board[7] != "." && board[7] != "x" && board[7] != "o") || (board[8] != "." && board[8] != "x" && board[8] != "o"))
+
+    if(board.length !== 9 || (board[0] !== "." && board[0] !== "x" && board[0] !== "o") || (board[1] !== "." && board[1] !== "x" && board[1] !== "o") || (board[2] !== "." && board[2] !== "x" && board[2] !== "o") || (board[3] !== "." && board[3] !== "x" && board[3] !== "o") || (board[4] !== "." && board[4] !== "x" && board[4] !== "o") || (board[5] !== "." && board[5] !== "x" && board[5] !== "o") || (board[6] !== "." && board[6] !== "x" && board[6] !== "o") || (board[7] !== "." && board[7] !== "x" && board[7] !== "o") || (board[8] !== "." && board[8] !== "x" && board[8] !== "o"))
         return true;
     else 
         return false;
@@ -39,11 +39,11 @@ function hasWon(ticTacToeBoard){
 
     let board = ticTacToeBoard;
 
-    if(!isBoardValid(board))
-        throw "Invalid Input";
+    if(isBoardValid(board))
+        throw "Invalid Input2";
     else{
 
-        if((board[0] == board[1] && board[0] == board[2] && board[0] != "." ) || (board[3] == board[4] && board[3] == board[5] && board[3] != ".") || (board[6] == board[7] && board[6] == board[8] && board[6] != ".") || (board[0] == board[3] && board[0] == board[6] && board[0] != ".") || (board[1] == board[4] && board[1] == board[7] && board[1] != ".") || (board[2] == board[5] && board[2] == board[8] && board[2] != ".") || (board[0] == board[4] && board[0] == board[8] && board[0] != ".") || (board[2] == board[4] && board[2] == board[6] && board[2] != "."))
+        if((board[0] === board[1] && board[0] === board[2] && board[0] !== "." ) || (board[3] === board[4] && board[3] === board[5] && board[3] !== ".") || (board[6] === board[7] && board[6] === board[8] && board[6] !== ".") || (board[0] === board[3] && board[0] === board[6] && board[0] !== ".") || (board[1] === board[4] && board[1] === board[7] && board[1] !== ".") || (board[2] === board[5] && board[2] === board[8] && board[2] !== ".") || (board[0] === board[4] && board[0] === board[8] && board[0] !== ".") || (board[2] === board[4] && board[2] === board[6] && board[2] !== "."))
             return true;
         else
             return false;
@@ -52,13 +52,44 @@ function hasWon(ticTacToeBoard){
 
 }
 
-//First AI move (Always the second move overall)
-function firstMove(ticTacToeBoard){
+//checks wich move it is and executes it 
+function move(ticTacToeBoard){
 
+    
     let board = ticTacToeBoard;
 
     if(isBoardValid(board))
         throw "Illegal Argument";
+
+    let count = 0;
+
+    for(let i = 0 ; i <  board.length ; i++){
+
+        if(board[i] === "."){
+            
+            count++;
+        
+        }
+    }
+
+    if(count === 8){
+        return firstMove(board);
+    }else if(count === 6){
+        return secondMove(board); 
+    }else if(count === 4){
+        return thirdMove(board);
+    }else if(count === 2 ){
+        return lastMove(board);
+    }else if(count === 0){
+        return board;
+    }
+
+}
+
+//First AI move (Always the second move overall)
+function firstMove(ticTacToeBoard){
+
+    let board = ticTacToeBoard;
 
     if(board === "....x....")
         return "o...x....";
@@ -71,9 +102,6 @@ function firstMove(ticTacToeBoard){
 function secondMove(ticTacToeBoard){
 
     let board = ticTacToeBoard;
-
-    if(isBoardValid(board))
-        throw "Illegal Argument";
     
     if(board === "ox..x...."){
         return "ox..x..o.";
@@ -139,7 +167,7 @@ function secondMove(ticTacToeBoard){
         return "....ox.xo";
     }else if(board === "....ox..x"){
         return "..o.ox..x";
-    }else if(board == "....o.xx."){
+    }else if(board === "....o.xx."){
         return "....o.xxo";
     }else if(board === "....o.x.x"){
         return "....o.xox";
@@ -153,9 +181,6 @@ function secondMove(ticTacToeBoard){
 function thirdMove(ticTacToeBoard){
 
     let board = ticTacToeBoard;
-
-    if(isBoardValid(board))
-        throw "Illegal Argument";
 
     if(board === "oxx.x..o."){
         return "oxx.x.oo.";
@@ -314,9 +339,6 @@ function lastMove(ticTacToeBoard){
 
     let board = ticTacToeBoard;
 
-    if(isBoardValid(board))
-        throw "Illegal Argument";
-
     if(board === "oxxxx.oo."){
         return "oxxxx.ooo";
     }else if(board === "oxx.xxoo."){
@@ -390,7 +412,7 @@ function lastMove(ticTacToeBoard){
     }else if(board === "o.xxxoo.x" || board === "o..xxooxx"){
         return board.replaceAt(1, "o");
     }else if(board === "xxoooxx.."){
-        return "xxooox.o";
+        return "xxoooxxo.";
     }else if(board === "xxooo.xx." || board === "xxooo.x.x"){
         return board.replaceAt(5, "o");
     }else if(board === "xoxoox.x."){
@@ -467,7 +489,7 @@ function lastMove(ticTacToeBoard){
         return board.replaceAt(0, "o");
     }else if(board === "ox.xo.xox"){
         return "oxoxo.xox";
-    }else if(board === "o.xxo.xox" || board == "o..xoxxox"){
+    }else if(board === "o.xxo.xox" || board === "o..xoxxox"){
         return board.replaceAt(1, "o");
     }else if(board === "x.xxo.oxo"){
         return "xoxxo.oxo";
@@ -508,9 +530,6 @@ function lastMove(ticTacToeBoard){
 module.exports = {
 
     hasWon,
-    firstMove,
-    secondMove,
-    thirdMove,
-    lastMove
+    move
 
 }

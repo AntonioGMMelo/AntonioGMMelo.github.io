@@ -5,3 +5,25 @@
   box-sizing: border-box;
 
 }
+
+.Square{
+
+  border:2px solid #000080;
+  border-radius: 5px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+}
+
+.O{
+
+  background: url("./O.png");
+
+}
+
+.X{
+
+  background: url("./X.png");
+
+}
