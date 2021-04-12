@@ -565,13 +565,47 @@ nav ul li a:hover{
 
     position: absolute;
     display: inline-block;
-    background: #FFF;
     width: 30px;
     height: 30px;
     margin-left: -49px;
     margin-top: 116px ;
     opacity: 0;
     cursor: pointer;
+
+}
+
+#TicTacToeDemo{
+
+    color: var(--Dirty-White);
+    text-decoration: none;
+    border-radius: 100px;
+    width: 50px;
+    height: 30px;
+    background-color: var(--Dirty-Black);
+    text-align: center;
+    text-justify:auto;
+    font-size: 15px;
+    margin-left: -110px;
+    margin-top: 116px ;
+    opacity: 0;
+
+}
+
+#TicTacToeDemo p{
+
+    margin-top: 5px;
+
+}
+
+.setVisible{
+
+    opacity: 1 !important;
+
+}
+
+#TicTacToeDemo:hover{
+    
+    transform: scale(1.1);
 
 }
 

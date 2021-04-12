@@ -314,6 +314,15 @@ thisWeb.addEventListener("click", function(){
 
 });
 
+
+let ticTacToe = document.getElementById("TicTacToe");
+
+ticTacToe.addEventListener("click", function(){
+
+    window.open("https://github.com/AntonioGMMelo/tic-tac-toe-ai");
+
+});
+
 // butto flip add
 
 let button = document.getElementById("submit");
@@ -325,5 +334,21 @@ button.addEventListener("mouseover", async function(){
     await new Promise(sleep => setTimeout(sleep, 5000));
 
     button.classList.remove("animationFlip");
+
+});
+
+//subtefuge to show demo button
+
+let imageHelper = document.getElementById("TicTacToeImage");
+
+imageHelper.addEventListener("mouseover", function(){
+
+    document.getElementById("TicTacToeDemo").classList.add("setVisible");
+
+});
+
+imageHelper.addEventListener("mouseout", function(){
+
+    document.getElementById("TicTacToeDemo").classList.remove("setVisible");
 
 });
