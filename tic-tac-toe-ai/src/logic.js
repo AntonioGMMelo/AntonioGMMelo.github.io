@@ -453,7 +453,7 @@ function lastMove(ticTacToeBoard){
         return board.replaceAt(0, "o");
     }else if(board === "ox..oxxox"){
         return "oxo.oxxox";
-    }else if(board === "oxx.o.xoxo" || board === "ox.xo.xox"){
+    }else if(board === "oxx.o.xox" || board === "ox.xo.xox"){
         return board.replaceAt(5, "o");
     }else if(board === "ox.xo.oxx"){
         return "oxoxo.oxx";

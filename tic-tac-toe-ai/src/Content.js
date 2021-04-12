@@ -18,6 +18,7 @@ import functions from "./logic"
                 if(i === square && board[i] === "."){
                     newNewBoard.push("x");
                     isMove = true;
+                    document.getElementsByClassName("Square")[i].classList.add("X");
                 }else{
                     newNewBoard.push(board[i]);
                 }
@@ -39,11 +40,17 @@ import functions from "./logic"
             const toString = board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6] + board[7] + board[8];
             const newBoard = functions.move(toString);
 
+            for(let i = 0; i < newBoard.length; i++){
+                if(newBoard[i] === "o"){
+                    document.getElementsByClassName("Square")[i].classList.add("O");
+                }
+            }
+
             const toArray = [newBoard[0], newBoard[1], newBoard[2], newBoard[3], newBoard[4], newBoard[5], newBoard[6], newBoard[7], newBoard[8]];
 
             setBoard(toArray);
 
-            await new Promise(r => setTimeout(r, 0));
+            await new Promise(r => setTimeout(r, 100));
 
             helper2(newBoard);            
             
@@ -101,7 +108,16 @@ import functions from "./logic"
 
                 </TicTacToeBoard>
                 
-                <Button type = "button" onClick = { ()=> {setBoard([".",".",".",".",".",".",".",".","."])}}>Reset</Button>
+                <Button type = "button" onClick = { ()=> {setBoard([".",".",".",".",".",".",".",".","."]);
+
+                                                            for(let i = 0; i<board.length; i++){
+                                                                
+                                                                document.getElementsByClassName("Square")[i].classList.remove("O");
+                                                                document.getElementsByClassName("Square")[i].classList.remove("X");
+                                                                
+                                                            }   
+
+                                                            }}>Reset</Button>
 
             </Container>
         
